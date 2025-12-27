@@ -20,11 +20,9 @@ const app = express();
 // Middleware
 app.use(express.json()); 
 app.use(cors({
-
-  origin: ['https://payroll-frontend-alpha.vercel.app, 'http://localhost:5173'],
-
+  // ✅ Fixed the missing quote after .app
+  origin: ['https://payroll-frontend-alpha.vercel.app', 'http://localhost:5173'],
   credentials: true
-
 }));
 
 // --- Routes Configuration ---
